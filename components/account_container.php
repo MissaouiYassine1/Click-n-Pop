@@ -1,4 +1,6 @@
 <div id="account-container">
-    <img src="assets/images/user-icon.png" alt="User Icon" />
+    <div class="account-photo">
+        <i class="fa-solid fa-user"></i>
+    </div>
     <span>My Account</span>
 </div>
