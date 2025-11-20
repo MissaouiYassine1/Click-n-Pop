@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/footer.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <script src="../assets/js/animations.js"></script>
 </head>
 <body>
     <?php include __DIR__ . '/../components/header.php'; ?>
@@ -20,6 +20,6 @@
     </main>
 
     <?php include __DIR__ . '/../components/footer.php'; ?>
-
+    
 </body>
 </html>

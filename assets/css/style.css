@@ -10,3 +10,10 @@
 body{
     font-family: 'Bubblegum Sans', Arial, sans-serif;
 }
+
+main{
+    margin-top:75px;
+    padding: 20px;
+    min-height: 80vh;
+    background-color: var(--background-color);
+}
