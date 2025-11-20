@@ -12,12 +12,14 @@
 
 </head>
 <body>
-    <?php include 'components/header.php'; ?>
+    <?php include __DIR__ . '/../components/header.php'; ?>
+
 
     <main>
         <?= $content ?? ""; ?>
     </main>
 
-    <?php include 'components/footer.php'; ?>
+    <?php include __DIR__ . '/../components/footer.php'; ?>
+
 </body>
 </html>
