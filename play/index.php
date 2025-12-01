@@ -20,9 +20,9 @@ ob_start();
         </div>
     </div>
     <aside>
-        <h2>Score:<span id='score-display'>0 points</span></h2>
+        <h2>Score:<span id='score-display'>0 </span><span> points</span></h2>
         
-        <h2>Accuracy:<span id='accuracy'>0%</span></h2>
+        <h2>Accuracy:<span id='accuracy'>0</span></h2>
         
     </aside>
     

@@ -126,9 +126,9 @@ toggleBtn.addEventListener('click', () => {
         game_area.innerHTML = "";
 
         // Reset stats
-        score = 0;
+        /* score = 0;
         totalBubbles = 0;
-        poppedBubbles = 0;
+        poppedBubbles = 0; */
         updateScore();
         updateAccuracy();
         return;
