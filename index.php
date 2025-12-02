@@ -12,7 +12,7 @@ ob_start();
         <h1>Welcome to <span>Click n' Pop</span></h1>
         <p>The most addictive bubble-popping click game!</p>
 
-        <a href="/play" class="btn-play">
+        <a href="/play" class="btn-play btn hover">
             Start Playing
         </a>
     </section>
@@ -45,7 +45,7 @@ ob_start();
 
     <section class="cta">
         <h2>Are you ready to pop?</h2>
-        <a href="/play" class="btn-start">
+        <a href="/play" class="btn-start btn hover">
             Play Now
         </a>
     </section>

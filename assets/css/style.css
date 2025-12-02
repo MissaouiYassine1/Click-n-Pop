@@ -5,6 +5,7 @@
     --secondary-color: #4a90e2;
     --background-color: #fbfdff;
     --text-color: #060b12;
+    --btn-text-color: #ffffff;
 }
 
 body{
@@ -23,9 +24,73 @@ body{
 }
 main{
     margin-top:75px;
-    padding: 20px;
+    /*padding: 20px;*/
     min-height: 80vh;
     
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    background: var(--secondary-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.hover {
+  position: relative;
+  overflow: hidden;                /* garde le layer à l'intérieur */
+  display: inline-block;
+}
+
+/* Layer background */
+.hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;                     /* commence hors écran à gauche */
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1); /* faible opacité */
+  backdrop-filter: blur(0.1px);      /* optionnel : vrai blur si tu veux */
+  transition: transform 0.5s ease;
+  transform: translateX(0);
+  pointer-events: none;            /* n'interfère pas avec le hover */
+}
+
+/* Effet au hover */
+.hover:hover::before {
+  transform: translateX(100%);     /* glisse jusqu’à droite */
+}
+
+
+.link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Ligne centrée */
+.link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;             /* position de la ligne */
+  width: 0%;
+  height: 2px;           /* épaisseur */
+  background: currentColor;  /* même couleur que le texte */
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
+}
+
+/* Animation au hover */
+.link:hover::after {
+  width: 100%;           /* s'étend du centre vers les bords */
 }
 
 
