@@ -5,6 +5,11 @@ let accuracy_display = document.getElementById('accuracy');
 let score = 0;
 let totalBubbles = 0;  // total de bulles créées
 let poppedBubbles = 0; // bulles éclatées
+function ring(e) {
+    let src = (e >= 0) ? 'yes.mp3' : 'ops.mp3';
+    const audio = new Audio("../assets/sounds/" + src);
+    audio.play();
+}
 
 class Bubble {
     constructor(x, y, radius, speed, color, value) {
@@ -43,6 +48,7 @@ class Bubble {
         this.element.appendChild(inner);
 
         this.element.addEventListener('click', () => this.pop());
+        this.element.addEventListener('click', () => ring(this.value),true);
     }
 
     pop() {
@@ -58,7 +64,7 @@ class Bubble {
         poppedBubbles++;
         updateScore();
         updateAccuracy();
-
+        
         // Score popup
         let popup = document.createElement('div');
         popup.className = 'score-popup';
